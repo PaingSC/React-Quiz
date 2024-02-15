@@ -2,7 +2,8 @@
     The "useReducer" hook is basically the a more advance and more complex way of 
     -managing state instead of the "useState" hook.
     The "useReducer" hook works with a so-called "reducer function" which is a pure
-    -function that will always take in the previous state and the so-called action as an argument and will then return the next state.
+    -function that will always take in the current state and the so-called action 
+    -as an argument and will then return the next state.
 
     1) Syntax
     useReducer(reducer, initialState);
@@ -10,9 +11,14 @@
         a)  the "useReducer" hook returns the "current state" and and "dispatch" method
         b)  the "dispatch" method dispatches an "action" that containing an object with 
             the properties of "type" and "payload(optional)" to the "reducer" function
-        c)  the "reducer" function take 2 arguments("current state" and an action) to
+        c)  the "reducer" function take 2 arguments("current state" and an "action") to
             make some kind of decisions in order to compute the next state usually based
-            on the action type
+            on the action "type"
         d)  the initialState can be a simple value but generally will contain an object
+
+    2) Usage
+        Usually we use "useReducer" when we have some more complex state to manage that the
+        state is not juse one single value.
+        The state is going to be an object.
 
 
