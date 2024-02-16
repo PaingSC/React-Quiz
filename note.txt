@@ -21,11 +21,22 @@
         state is not juse one single value.
         The state is going to be an object.
 
+-------------------------------------------------------------------------------------------------------
 
 2. Fake APIs and Json-server
     1) Installing json-server
         in terminal, enter "npm install json-server"
-    2) Adding an npm script
-        in package.json, add a script {"server": "json-server --watch src/filename.json --PORT xxxx"}
+    2) Adding an npm script to watch data
+        in package.json, add a script {"server": "json-server --watch src/filename.json --port xxxx"}
     3) run the script
         >> npm run server
+
+-------------------------------------------------------------------------------------------------------
+
+3. Fetching data from fake APIs
+    1) use "useEffect" hook to fetch data
+    2) dispatch actions for fetching conditions
+        a) define "type" of name for a success fetch
+        b) define "type" of name for a fetching failed
+    3) use "useReducer" hook for managing state for fetching data
+        a) return "next state" according to the dispatched actions
