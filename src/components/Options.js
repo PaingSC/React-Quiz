@@ -1,4 +1,4 @@
-function Options({ question, dispatch, answer }) {
+function Options({ question, dispatch, answer, currentIndex }) {
   const hasAnswer = answer !== null;
   return (
     <div className="options">
@@ -10,7 +10,12 @@ function Options({ question, dispatch, answer }) {
           }`}
           disabled={hasAnswer}
           key={option}
-          onClick={() => dispatch({ type: "newAnswer", payload: index })}
+          onClick={() =>
+            dispatch({
+              type: "newAnswer",
+              payload: index,
+            })
+          }
         >
           {option}
         </button>
