@@ -40,3 +40,5 @@
         b) define "type" of name for a fetching failed
     3) use "useReducer" hook for managing state for fetching data
         a) return "next state" according to the dispatched actions
+
+-------------------------------------------------------------------------------------------------------
